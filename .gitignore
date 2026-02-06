@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.env
+.venv/
+venv/
+test_state.json
+test_mcp.json
+findings.json
+state.json
+reports/
+*.zip

