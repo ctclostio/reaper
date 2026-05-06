@@ -1,7 +1,6 @@
 """Reaper CLI entry point."""
 
 import argparse
-import asyncio
 import time
 import sys
 import os
@@ -33,7 +32,7 @@ def main():
     parser.add_argument("--max-requests", type=int, default=500, help="Maximum HTTP requests (default: 500)")
     parser.add_argument("--timeout", type=int, default=10, help="Request timeout in seconds (default: 10)")
     parser.add_argument("--output", default="./reports", help="Output directory for reports (default: ./reports)")
-    parser.add_argument("--model", default="claude-sonnet-4-5-20250929", help="AI model to use")
+    parser.add_argument("--model", default="claude-sonnet-4-6", help="AI model to use")
 
     args = parser.parse_args()
 

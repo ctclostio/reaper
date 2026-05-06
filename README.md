@@ -37,7 +37,7 @@ python -m reaper <target-url> [options]
 | `--max-requests` | 500 | Maximum HTTP requests |
 | `--timeout` | 10 | Request timeout in seconds |
 | `--output` | `./reports` | Output directory for reports |
-| `--model` | `claude-sonnet-4-5-20250929` | AI model to use |
+| `--model` | `claude-sonnet-4-6` | AI model to use |
 
 ### Examples
 
@@ -110,4 +110,4 @@ Reports are saved as markdown with:
 
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE).

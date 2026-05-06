@@ -11,7 +11,7 @@ class ScanConfig:
     max_requests: int = 500
     request_timeout: int = 10
     output_dir: str = "./reports"
-    model: str = "claude-sonnet-4-5-20250929"
+    model: str = "claude-sonnet-4-6"
 
     def __post_init__(self):
         # Default scope to target domain
